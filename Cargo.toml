@@ -1,6 +1,7 @@
 [package]
-name = "element"
+name = "the-elements"
 version = "0.1.0"
 edition = "2024"
+description = "A lightweight script that provides objects and enum variants for each of the elements in the periodic table (as of writing)"
 
 [dependencies]
