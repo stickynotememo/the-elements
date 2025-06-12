@@ -6,3 +6,5 @@ description = "A lightweight script that provides objects and enum variants for 
 license = "MIT"
 
 [dependencies]
+csv = "1.3.1"
+serde = { version = "1.0.219", features = ["derive"] }

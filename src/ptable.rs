@@ -1,50 +1,7 @@
-AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,NumberofElectrons,Period,Group,Phase,Radioactive,Natural,Metal,Nonmetal,Metalloid,Type,AtomicRadius,Electronegativity,FirstIonization,Density,MeltingPoint,BoilingPoint,NumberOfIsotopes,Discoverer,Year,SpecificHeat,NumberofShells,NumberofValence
-"hydrogen" => Ok(Element{
-    atomic_number:1,
-    name: "Hydrogen",
-    symbol: Symbol::H,
-    atomic_mass: 1.007,
-    neutrons: 0,
-    protons: 1,
-    electrons: 1,
-    period: 1,
-    group: 1,
-    state: State::gas,
-    type: Type::Nonmetal,
-    atomic_radius: 0.79,
-    electronegativity: 2.2,
-    first_ionization_energy: 13.5984,
-    density: 8.99E-05,
-    melting_point: 14.175,
-    boiling_point: 20.28,
-    isotopes: 3,
-    discoverer: "Cavendish",
-    year: 1766,
-    specific_heat_capacity: 14.304,
-    shells: 1,
-    valence_electrons: 1}),
-
-2,Helium,He,4.002,2,2,2,1,18,gas,,yes,,yes,,Noble Gas,0.49,,24.5874,1.79E-04,,4.22,5,Janssen,1868,5.193,1 ,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3,Lithium,Li,6.941,4,3,3,2,1,solid,,yes,yes,,,Alkali Metal,2.1,0.98,5.34E-01,917,5.3453.85,1615,5,Arfvedson,1817,3.582,2,1
+pub const TABLE: &'static str = "AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,NumberofElectrons,Period,Group,Phase,Radioactive,Natural,Metal,Nonmetal,Metalloid,Type,AtomicRadius,Electronegativity,FirstIonization,Density,MeltingPoint,BoilingPoint,NumberOfIsotopes,Discoverer,Year,SpecificHeat,NumberofShells,NumberofValence
+1,Hydrogen,H,1.007,0,1,1,1,1,gas,,yes,,yes,,Nonmetal,0.79,2.2,13.5984,8.99E-05,14.175,20.28,3,Cavendish,1766,14.304,1,1
+2,Helium,He,4.002,2,2,2,1,18,gas,,yes,,yes,,Noble Gas,0.49,,24.5874,1.79E-04,,4.22,5,Janssen,1868,5.193,1,
+3,Lithium,Li,6.941,4,3,3,2,1,solid,,yes,yes,,,Alkali Metal,2.1,0.98,5.3917,5.34E-01,453.85,1615,5,Arfvedson,1817,3.582,2,1
 4,Beryllium,Be,9.012,5,4,4,2,2,solid,,yes,yes,,,Alkaline Earth Metal,1.4,1.57,9.3227,1.85E+00,1560.15,2742,6,Vaulquelin,1798,1.825,2,2
 5,Boron,B,10.811,6,5,5,2,13,solid,,yes,,,yes,Metalloid,1.2,2.04,8.298,2.34E+00,2573.15,4200,6,Gay-Lussac,1808,1.026,2,3
 6,Carbon,C,12.011,6,6,6,2,14,solid,,yes,,yes,,Nonmetal,0.91,2.55,11.2603,2.27E+00,3948.15,4300,7,Prehistoric,,0.709,2,4
@@ -66,7 +23,7 @@ AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,Numberof
 22,Titanium,Ti,47.867,26,22,22,4,4,solid,,yes,yes,,,Transition Metal,2,1.54,6.8281,4.54E+00,1933.15,3560,9,Gregor,1791,0.523,4,
 23,Vanadium,V,50.942,28,23,23,4,5,solid,,yes,yes,,,Transition Metal,1.9,1.63,6.7462,6.11E+00,2175.15,3680,9,   del Rio,1801,0.489,4,
 24,Chromium,Cr,51.996,28,24,24,4,6,solid,,yes,yes,,,Transition Metal,1.9,1.66,6.7665,7.15E+00,2130.15,2944,9,Vauquelin,1797,0.449,4,
-25,Manganese,Mn,54.938,30,25,25,4,7,solid,,yes,yes,,,Transition Metal,1.8,1.55,7.434,7.44E+00,1519.15,2334,11,"Gahn, Scheele",1774,0.479,4,
+25,Manganese,Mn,54.938,30,25,25,4,7,solid,,yes,yes,,,Transition Metal,1.8,1.55,7.434,7.44E+00,1519.15,2334,11,\"Gahn, Scheele\",1774,0.479,4,
 26,Iron,Fe,55.845,30,26,26,4,8,solid,,yes,yes,,,Transition Metal,1.7,1.83,7.9024,7.87E+00,1808.15,3134,10,Prehistoric,,0.449,4,
 27,Cobalt,Co,58.933,32,27,27,4,9,solid,,yes,yes,,,Transition Metal,1.7,1.88,7.881,8.86E+00,1768.15,3200,14,Brandt,1735,0.421,4,
 28,Nickel,Ni,58.693,31,28,28,4,10,solid,,yes,yes,,,Transition Metal,1.6,1.91,7.6398,8.91E+00,1726.15,3186,11,Cronstedt,1751,0.444,4,
@@ -116,7 +73,7 @@ AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,Numberof
 72,Hafnium,Hf,178.49,106,72,72,6,4,solid,,yes,yes,,,Transition Metal,2.2,1.3,6.8251,1.33E+01,2500.15,4876,17,Coster and von Hevesy,1923,0.144,6,
 73,Tantalum,Ta,180.948,108,73,73,6,5,solid,,yes,yes,,,Transition Metal,2.1,1.5,7.5496,1.67E+01,3269.15,5731,19,Ekeberg,1801,0.14,6,
 74,Wolfram,W,183.84,110,74,74,6,6,solid,,yes,yes,,,Transition Metal,2,2.36,7.864,1.93E+01,3680.15,5828,22,J. and F. d'Elhuyar,1783,0.132,6,
-75,Rhenium,Re,186.207,111,75,75,6,7,solid,,yes,yes,,,Transition Metal,2,1.9,7.8335,2.10E+01,3453.15,5869,21,"Noddack, Berg, and Tacke",1925,0.137,6,
+75,Rhenium,Re,186.207,111,75,75,6,7,solid,,yes,yes,,,Transition Metal,2,1.9,7.8335,2.10E+01,3453.15,5869,21,\"Noddack, Berg, and Tacke\",1925,0.137,6,
 76,Osmium,Os,190.23,114,76,76,6,8,solid,,yes,yes,,,Transition Metal,1.9,2.2,8.4382,2.26E+01,3300.15,5285,19,Tennant,1803,0.13,6,
 77,Iridium,Ir,192.217,115,77,77,6,9,solid,,yes,yes,,,Transition Metal,1.9,2.2,8.967,2.26E+01,2716.15,4701,25,Tennant,1804,0.131,6,
 78,Platinum,Pt,195.084,117,78,78,6,10,solid,,yes,yes,,,Transition Metal,1.8,2.28,8.9587,2.15E+01,2045.15,4098,32,Ulloa/Wood,1735,0.133,6,
@@ -150,7 +107,7 @@ AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,Numberof
 106,Seaborgium,Sg,266,160,106,106,7,6,artificial,yes,,yes,,,Transactinide,,,,3.50E+01,,,,Ghiorso et al.,1974,,7,
 107,Bohrium,Bh,264,157,107,107,7,7,artificial,yes,,yes,,,Transactinide,,,,3.70E+01,,,,Armbruster and M�nzenberg,1981,,7,
 108,Hassium,Hs,267,159,108,108,7,8,artificial,yes,,yes,,,Transactinide,,,,4.10E+01,,,,Armbruster and M�nzenberg,1983,,7,
-109,Meitnerium,Mt,268,159,109,109,7,9,artificial,yes,,yes,,,Transactinide,,,,3.50E+01,,,,"GSI, Darmstadt, West Germany",1982,,7,
+109,Meitnerium,Mt,268,159,109,109,7,9,artificial,yes,,yes,,,Transactinide,,,,3.50E+01,,,,\"GSI, Darmstadt, West Germany\",1982,,7,
 110,Darmstadtium ,Ds ,271,161,110,110,7,10,artificial,yes,,yes,,,Transactinide,,,,,,,,,1994,,7,
 111,Roentgenium ,Rg ,272,161,111,111,7,11,artificial,yes,,yes,,,Transactinide,,,,,,,,,1994,,7,
 112,Copernicium ,Cn ,285,173,112,112,7,12,artificial,yes,,yes,,,Transactinide,,,,,,,,,1996,,7,
@@ -160,3 +117,4 @@ AtomicNumber,Element,Symbol,AtomicMass,NumberofNeutrons,NumberofProtons,Numberof
 116,Livermorium,Lv,292,176,116,116,7,16,artificial,yes,,yes,,,Transactinide,,,,,,,,,2000,,7,6
 117,Tennessine,Ts,295,178,117,117,7,17,artificial,yes,,,yes,,,,,,,,,,,2010,,7,7
 118,Oganesson,Og,294,176,118,118,7,18,artificial,yes,,,yes,,Noble Gas,,,,,,,,,2006,,7,8
+";
